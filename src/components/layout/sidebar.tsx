@@ -47,13 +47,14 @@ export function AppSidebar() {
         <SidebarMenu>
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.label}>
-              <Link href={item.href} legacyBehavior passHref>
+              <Link href={item.href} passHref>
                 <SidebarMenuButton
                   isActive={isActive(item.href)}
                   icon={item.icon}
                   tooltip={item.label}
+                  asChild
                 >
-                  {item.label}
+                  <div>{item.label}</div>
                 </SidebarMenuButton>
               </Link>
             </SidebarMenuItem>
@@ -63,13 +64,14 @@ export function AppSidebar() {
         <SidebarMenu>
           {helpMenuItems.map((item) => (
             <SidebarMenuItem key={item.label}>
-              <Link href={item.href} legacyBehavior passHref>
+              <Link href={item.href} passHref>
                 <SidebarMenuButton
                   isActive={isActive(item.href)}
                   icon={item.icon}
                   tooltip={item.label}
+                  asChild
                 >
-                  {item.label}
+                  <div>{item.label}</div>
                 </SidebarMenuButton>
               </Link>
             </SidebarMenuItem>
