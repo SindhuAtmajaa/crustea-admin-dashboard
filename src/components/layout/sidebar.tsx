@@ -47,16 +47,16 @@ export function AppSidebar() {
         <SidebarMenu>
           {menuItems.map((item) => (
             <SidebarMenuItem key={item.label}>
-              <Link href={item.href} passHref>
-                <SidebarMenuButton
-                  isActive={isActive(item.href)}
-                  icon={item.icon}
-                  tooltip={item.label}
-                  asChild
-                >
-                  <div>{item.label}</div>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton
+                asChild
+                isActive={isActive(item.href)}
+                icon={item.icon}
+                tooltip={item.label}
+              >
+                <Link href={item.href}>
+                  {item.label}
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>
@@ -64,16 +64,16 @@ export function AppSidebar() {
         <SidebarMenu>
           {helpMenuItems.map((item) => (
             <SidebarMenuItem key={item.label}>
-              <Link href={item.href} passHref>
-                <SidebarMenuButton
-                  isActive={isActive(item.href)}
-                  icon={item.icon}
-                  tooltip={item.label}
-                  asChild
-                >
-                  <div>{item.label}</div>
-                </SidebarMenuButton>
-              </Link>
+              <SidebarMenuButton
+                asChild
+                isActive={isActive(item.href)}
+                icon={item.icon}
+                tooltip={item.label}
+              >
+                <Link href={item.href}>
+                  {item.label}
+                </Link>
+              </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
         </SidebarMenu>
